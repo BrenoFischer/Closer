@@ -1,0 +1,39 @@
+@import '../../sass/_variables';
+
+.header {
+    height: 62rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        margin: 0 30rem;
+    }
+
+    &__title {
+        font-size: 5.6rem;
+        font-weight: 700;
+        line-height: 6.6rem;
+        letter-spacing: 0px;
+        color: $darkGray;
+        text-align: center;
+    }
+
+    &__paragraph {
+        padding: 0 4rem;
+        margin-top: 5rem;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 3rem;
+        letter-spacing: 0em;
+        text-align: center;
+        color: $mediumGray;
+    }
+
+    .buttons-container {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: space-around;
+    }
+}
