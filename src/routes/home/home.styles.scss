@@ -41,9 +41,8 @@
 }
 
 
-//Styles for Home Enterprise Section
-.enterprise-section {
-    background-color: $lightGray;
+//Global Styles for Home Sections
+.home-section {
     height: 65.8rem;
     padding: 13rem 4rem;
 
@@ -95,10 +94,31 @@
             font-weight: 700;
             font-size: 3.2rem;
             line-height: 4.6rem;
-            
+
             &:not(:last-child) {
                 margin-bottom: 2.5rem;
             }
         }
     }
 }
+
+//Styles for Home Enterprise Section
+.enterprise-section {
+    background-color: $lightGray;
+}
+
+
+//Corporate Section Styles
+.corporate-section {
+    background-color: $pinkishWhite;
+}
+
+.invert-img {
+    margin-right: 0;
+}
+
+.invert-text {
+    margin-right: 10rem;
+}
+
+
