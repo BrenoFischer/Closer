@@ -43,6 +43,7 @@
 
 //Global Styles for Home Sections
 .home-section {
+    background-color: $lightGray;
     height: 65.8rem;
     padding: 13rem 4rem;
 
@@ -103,9 +104,9 @@
 }
 
 //Styles for Home Enterprise Section
-.enterprise-section {
-    background-color: $lightGray;
-}
+// .enterprise-section {
+//     background-color: $lightGray;
+// }
 
 
 //Corporate Section Styles
@@ -122,3 +123,7 @@
 }
 
 
+//Styles for Home Partnerships Section
+// .partnerships-section {
+//     background-color: $lightGray;
+// }
