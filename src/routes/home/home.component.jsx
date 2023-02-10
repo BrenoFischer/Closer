@@ -1,6 +1,7 @@
 import { BsFillPlayCircleFill } from 'react-icons/bs';
 
 import Button from '../../components/button/button.component';
+import Footer from '../../components/footer/footer.components';
 import './home.styles.scss';
 
 const Home = () => {
@@ -94,6 +95,7 @@ const Home = () => {
                 <HomeCorporateSection />
                 <HomePartnershipsSection />
             </main>
+            <Footer />
         </>
     );
 }

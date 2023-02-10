@@ -1,0 +1,80 @@
+@import '../../sass/_variables';
+
+$footer-height: 28rem;
+$footer-p-top: 5.6rem;
+$footer-p-bottom: 3.2rem;
+
+$upper-height: 6rem;
+
+$medium-height: 8rem;
+
+.footer {
+    height: $footer-height;
+    padding-bottom: $footer-p-bottom;
+    padding-top: $footer-p-top;
+
+    &__upper-wrapper {
+        position: relative;
+    }
+
+    &__logo-container {
+        position: absolute;
+
+        img {
+            height: $upper-height;
+        }
+    }
+
+    &__links-container {
+          width: 100%;
+          height: $upper-height;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      
+    }
+        &__link {
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 1.6rem;
+            color: $mediumGray;
+    
+            text-align: center;
+            padding: 3.2rem 2.4rem;
+            cursor: pointer;
+    }
+
+    &__medium-wrapper {
+        position: relative;
+        height: $medium-height;
+        border-bottom: 1px solid #D4D2E3;
+    }
+
+    &__social-container {
+        position: absolute;
+        right: 0;
+        bottom: 2rem;
+        display: flex;
+    }
+
+    &__social-icon {
+        color: $mediumGray;
+        font-size: 3rem;
+        margin-right: 1.6rem;
+    }
+
+    &__lower-wrapper {
+        height: calc($footer-height - $upper-height - $medium-height - $footer-p-bottom);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            color: $mediumGray;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 18px;
+        }
+    }
+}
