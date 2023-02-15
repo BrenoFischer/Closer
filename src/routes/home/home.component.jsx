@@ -12,9 +12,9 @@ const Home = () => {
                     <h1 className='header__title'>A dedicated team to grow your company</h1>
                     <p className='header__paragraph'>Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.</p>
                     <div className='buttons-container'>
-                        <Button title='Social Enterprises' />
-                        <Button title='Corporates' />
-                        <Button title='Partnership' />
+                        <Button title='Social Enterprises' color="orange" />
+                        <Button title='Corporates' color="blue" />
+                        <Button title='Partnership' color="green" />
                     </div>
                 </div>
             </header>
