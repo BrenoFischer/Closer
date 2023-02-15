@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: $primary-color;
 
     &__container {
         margin: 0 30rem;
@@ -18,7 +19,7 @@
         font-weight: 700;
         line-height: 6.6rem;
         letter-spacing: 0px;
-        color: $darkGray;
+        color: $white;
         text-align: center;
     }
 
@@ -30,7 +31,7 @@
         line-height: 3rem;
         letter-spacing: 0em;
         text-align: center;
-        color: $mediumGray;
+        color: $white;
     }
 
     .buttons-container {

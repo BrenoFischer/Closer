@@ -7,11 +7,12 @@
     justify-content: space-between;
   
     &__logo-container {
-      height: 100%;
-      padding: 2.5rem;
-      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       img {
-          width: 6rem;
+        width: 6rem;
       }
     }
   
@@ -25,10 +26,10 @@
     }
     &__link {
         font-style: normal;
-        font-weight: 400;
+        font-weight: 500;
         font-size: 1.6rem;
         line-height: 1.8rem;
-        color: $blue;
+        color: $secondary-color;
 
         text-align: center;
         padding: 3.2rem 2.4rem;
