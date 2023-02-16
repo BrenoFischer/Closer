@@ -1,5 +1,9 @@
 import { BsFillPlayCircleFill } from 'react-icons/bs';
 
+import EnterpriseFigure from '../../assets/enterprise-home-figure.png';
+import CorporateFigure from '../../assets/corporates-home-figure.png';
+import PartnershipsFigure from '../../assets/partnership-home-figure.png';
+
 import Button from '../../components/button/button.component';
 import Footer from '../../components/footer/footer.components';
 import './home.styles.scss';
@@ -27,16 +31,20 @@ const Home = () => {
                 <h2 className='home-section__title'>Social Enterprise</h2>
                 <div className='home-section__wrapper'>
                     <div className='home-section__img-container'>
-                        <div className='home-section__icon-box'>
+                        {/* <div className='home-section__icon-box'>
                             <BsFillPlayCircleFill />
-                        </div>
+                        </div> */}
+                        <img src={EnterpriseFigure} alt="Enterprise" />
                     </div>
                     <div className='home-section__text-container'>
-                        <p>By creating a visual guide along the way, the designer or developer can get input from the other people involved in the website such as the customer, their manager, and other members of the team. </p>
+                        <p>Lorem ipsum dolor sit amet consectetur. Duis etiam dolor leo aliquet nulla. Sit tellus elit pellentesque curabitur nunc velit purus risus in. Egestas et at tempus nunc est morbi. Sapien ornare pellentesque.</p>
                         <h3>Feature One</h3>
-                        <p>By creating a visual guide along the way, the designer or developer can get input from the other people.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur. In sagittis sit condimentum diam in lacus. Aliquet viverra velit duis enim lacus sit sit praesent purus.</p>
                         <h3>Feature Two</h3>
-                        <p>By creating a visual guide along the way, the designer or developer.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur. In sagittis sit condimentum diam in lacus. Aliquet viverra velit duis enim lacus sit sit praesent purus.</p>
+                        <div className='home-section__button-container'>
+                            <Button title='Social Enterprises' color="orange" />
+                        </div>
                     </div>
                 </div>
             </section>
@@ -48,17 +56,21 @@ const Home = () => {
             <section className='home-section corporate-section'>
                 <h2 className='home-section__title'>Corporates</h2>
                 <div className='home-section__wrapper'>
-                    <div className='home-section__text-container invert-text'>
-                        <p>By creating a visual guide along the way, the designer or developer can get input from the other people involved in the website such as the customer, their manager, and other members of the team. </p>
+                <div className='home-section__text-container invert-text'>
+                        <p>Lorem ipsum dolor sit amet consectetur. Duis etiam dolor leo aliquet nulla. Sit tellus elit pellentesque curabitur nunc velit purus risus in. Egestas et at tempus nunc est morbi. Sapien ornare pellentesque.</p>
                         <h3>Feature One</h3>
-                        <p>By creating a visual guide along the way, the designer or developer can get input from the other people.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur. In sagittis sit condimentum diam in lacus. Aliquet viverra velit duis enim lacus sit sit praesent purus.</p>
                         <h3>Feature Two</h3>
-                        <p>By creating a visual guide along the way, the designer or developer.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur. In sagittis sit condimentum diam in lacus. Aliquet viverra velit duis enim lacus sit sit praesent purus.</p>
+                        <div className='home-section__button-container'>
+                            <Button title='Corporates' color="blue" />
+                        </div>
                     </div>
                     <div className='home-section__img-container invert-img'>
-                        <div className='home-section__icon-box'>
+                        {/* <div className='home-section__icon-box'>
                             <BsFillPlayCircleFill />
-                        </div>
+                        </div> */}
+                        <img src={CorporateFigure} alt="Corporates" />
                     </div>
                 </div>
             </section>
@@ -71,16 +83,20 @@ const Home = () => {
                 <h2 className='home-section__title'>Partnerships</h2>
                 <div className='home-section__wrapper'>
                     <div className='home-section__img-container'>
-                        <div className='home-section__icon-box'>
+                        {/* <div className='home-section__icon-box'>
                             <BsFillPlayCircleFill />
-                        </div>
+                        </div> */}
+                        <img src={PartnershipsFigure} alt="Partnerships" />
                     </div>
                     <div className='home-section__text-container'>
-                        <p>By creating a visual guide along the way, the designer or developer can get input from the other people involved in the website such as the customer, their manager, and other members of the team. </p>
+                        <p>Lorem ipsum dolor sit amet consectetur. Duis etiam dolor leo aliquet nulla. Sit tellus elit pellentesque curabitur nunc velit purus risus in. Egestas et at tempus nunc est morbi. Sapien ornare pellentesque.</p>
                         <h3>Feature One</h3>
-                        <p>By creating a visual guide along the way, the designer or developer can get input from the other people.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur. In sagittis sit condimentum diam in lacus. Aliquet viverra velit duis enim lacus sit sit praesent purus.</p>
                         <h3>Feature Two</h3>
-                        <p>By creating a visual guide along the way, the designer or developer.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur. In sagittis sit condimentum diam in lacus. Aliquet viverra velit duis enim lacus sit sit praesent purus.</p>
+                        <div className='home-section__button-container'>
+                            <Button title='Partnerships' color="green" />
+                        </div>
                     </div>
                 </div>
             </section>

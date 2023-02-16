@@ -44,32 +44,26 @@
 
 //Global Styles for Home Sections
 .home-section {
-    background-color: $lightGray;
-    height: 65.8rem;
-    padding: 13rem 4rem;
+    padding: 12rem 4rem;
 
     &__title {
-        color: $darkGray;
+        color: $secondary-color;
+        font-family: 'DM Serif Display';
         font-style: normal;
-        font-weight: 700;
-        font-size: 3.6rem;
+        font-weight: 400;
+        font-size: 3.2rem;
         line-height: 4.6rem;
     }
 
     &__wrapper {
-        margin-top: 4.6rem;
+        margin-top: 4.8rem;
         display: flex;
     }
 
     &__img-container {
-        margin-right: 10rem;
-        background-color: $iceWhite;
-        border-radius: 2.5rem 0px 0px 2.5rem;
-        width: 40rem;
-        height: 35.6rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        margin-right: 11rem;
+        width: 45rem;
+        height: 45rem;
         flex-shrink: 0;
     }
 
@@ -79,12 +73,13 @@
     }
 
     &__text-container {
-        color: $mediumGray;
+        color: $primary-color;
+        position: relative;
 
         p {
             font-weight: 400;
             font-size: 1.6rem;
-            line-height: 3rem;
+            line-height: 3.2rem;
 
             &:not(:last-child) {
                 margin-bottom: 2.5rem;
@@ -92,15 +87,22 @@
         }
 
         h3 {
-            color: $darkGray;
-            font-weight: 700;
-            font-size: 3.2rem;
-            line-height: 4.6rem;
+            color: $tertiary-color;
+            font-family: 'DM Serif Display';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 2.8rem;
+            line-height: 3.3rem;
 
             &:not(:last-child) {
                 margin-bottom: 2.5rem;
             }
         }
+    }
+
+    &__button-container {
+        position: absolute;
+        bottom: 0;
     }
 }
 
@@ -111,16 +113,12 @@
 
 
 //Corporate Section Styles
-.corporate-section {
-    background-color: $pinkishWhite;
-}
-
 .invert-img {
     margin-right: 0;
 }
 
 .invert-text {
-    margin-right: 10rem;
+    margin-right: 11rem;
 }
 
 
