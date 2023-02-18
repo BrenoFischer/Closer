@@ -1,10 +1,16 @@
 @import '../../sass/_variables';
+@import '../../sass/_mixins';
 
 .navigation {
     height: 8rem;
     width: 100%;
+    position: relative;
     display: flex;
     justify-content: space-between;
+
+    @include respond(phone) {
+      height: 14.4rem;
+    }
   
     &__logo-container {
       display: flex;
@@ -13,7 +19,34 @@
 
       img {
         width: 6rem;
+
+        @include respond(phone) {
+          width: 11.2rem;
+        }
       }
+    }
+
+    &__burger-menu {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 3.8rem;
+      height: 3.8rem;
+
+      @include respond(phone) {
+        display: flex;
+      }
+
+        .bar {
+          width: 100%;
+          background-color: $primary-color;
+          border: 1px solid $primary-color;
+          border-radius: 10px;
+        }
     }
   
     &__links-container {
@@ -22,6 +55,10 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
+
+      @include respond(phone) {
+        display: none;
+      }
   
     }
     &__link {
