@@ -1,5 +1,3 @@
-import { BsFillPlayCircleFill } from 'react-icons/bs';
-
 import EnterpriseFigure from '../../assets/enterprise-home-figure.png';
 import CorporateFigure from '../../assets/corporates-home-figure.png';
 import PartnershipsFigure from '../../assets/partnership-home-figure.png';
@@ -31,9 +29,6 @@ const Home = () => {
                 <h2 className='home-section__title'>Social Enterprise</h2>
                 <div className='home-section__wrapper'>
                     <div className='home-section__img-container'>
-                        {/* <div className='home-section__icon-box'>
-                            <BsFillPlayCircleFill />
-                        </div> */}
                         <img src={EnterpriseFigure} alt="Enterprise" />
                     </div>
                     <div className='home-section__text-container'>
@@ -67,9 +62,6 @@ const Home = () => {
                         </div>
                     </div>
                     <div className='home-section__img-container invert-img'>
-                        {/* <div className='home-section__icon-box'>
-                            <BsFillPlayCircleFill />
-                        </div> */}
                         <img src={CorporateFigure} alt="Corporates" />
                     </div>
                 </div>
@@ -83,9 +75,6 @@ const Home = () => {
                 <h2 className='home-section__title'>Partnerships</h2>
                 <div className='home-section__wrapper'>
                     <div className='home-section__img-container'>
-                        {/* <div className='home-section__icon-box'>
-                            <BsFillPlayCircleFill />
-                        </div> */}
                         <img src={PartnershipsFigure} alt="Partnerships" />
                     </div>
                     <div className='home-section__text-container'>
