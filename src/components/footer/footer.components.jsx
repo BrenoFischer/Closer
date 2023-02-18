@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 
-import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
-import Logo from '../../assets/logo-color.png';
+import Logo from '../../assets/logo-white.png';
 
 import './footer.styles.scss';
 
@@ -26,14 +26,22 @@ const Footer = () => {
             </div>
             <div className='footer__medium-wrapper'>
                 <div className='footer__social-container'>
-                    <Link className='footer__social-icon' to='/'><FaFacebookSquare /></Link>
-                    <Link className='footer__social-icon' to='/'><FaTwitterSquare /></Link>
-                    <Link className='footer__social-icon' to='/'><FaInstagramSquare /></Link>
-                    <Link className='footer__social-icon' to='/'><FaLinkedin /></Link>
+                    <div className='footer__social-icon-container'>
+                        <Link className='footer__social-icon' to='/'><FaFacebookF /></Link>
+                    </div>
+                    <div className='footer__social-icon-container'>
+                        <Link className='footer__social-icon' to='/'><FaTwitter /></Link>
+                    </div>
+                    <div className='footer__social-icon-container'>
+                        <Link className='footer__social-icon' to='/'><FaInstagram /></Link>
+                    </div>
+                    <div className='footer__social-icon-container'>
+                        <Link className='footer__social-icon' to='/'><FaLinkedinIn /></Link>
+                    </div>
                 </div>
             </div>
             <div className='footer__lower-wrapper'>
-                <p>Copyright © 2023 Closer | All Rights</p><p>Reserved</p>
+                <p>Copyright © 2023 Closer | All Rights Reserved</p>
             </div>
         </footer>
     );

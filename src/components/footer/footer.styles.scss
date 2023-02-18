@@ -1,17 +1,18 @@
 @import '../../sass/_variables';
 
 $footer-height: 28rem;
-$footer-p-top: 5.6rem;
-$footer-p-bottom: 3.2rem;
+$footer-p-top: 4rem;
+$footer-p-bottom: 4rem;
+$footer-p-sides: 1rem;
 
-$upper-height: 6rem;
+$upper-height: 9.3rem;
 
-$medium-height: 8rem;
+$medium-height: 4.5rem;
 
 .footer {
+    background-color: $primary-color;
     height: $footer-height;
-    padding-bottom: $footer-p-bottom;
-    padding-top: $footer-p-top;
+    padding: $footer-p-top $footer-p-sides $footer-p-bottom $footer-p-sides;
 
     &__upper-wrapper {
         position: relative;
@@ -19,6 +20,7 @@ $medium-height: 8rem;
 
     &__logo-container {
         position: absolute;
+        left: calc(4rem - $footer-p-sides);
 
         img {
             height: $upper-height;
@@ -33,15 +35,15 @@ $medium-height: 8rem;
           justify-content: center;
       
     }
-        &__link {
-            font-weight: 400;
-            font-size: 1.6rem;
-            line-height: 1.6rem;
-            color: $mediumGray;
-    
-            text-align: center;
-            padding: 3.2rem 2.4rem;
-            cursor: pointer;
+    &__link {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+        color: $iceWhite;
+
+        text-align: center;
+        padding: 3.2rem 2.4rem;
+        cursor: pointer;
     }
 
     &__medium-wrapper {
@@ -53,14 +55,30 @@ $medium-height: 8rem;
     &__social-container {
         position: absolute;
         right: 0;
-        bottom: 2rem;
+        bottom: $footer-p-sides;
         display: flex;
     }
 
+    &__social-icon-container {
+        background-color: $iceWhite;
+        height: 3.6rem;
+        width: 3.6rem;
+        border-radius: .8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:not(:last-child) {
+            margin-right: 1.6rem;
+        }
+    }
+
     &__social-icon {
-        color: $mediumGray;
-        font-size: 3rem;
-        margin-right: 1.6rem;
+        display: flex;
+        align-items: center;
+        color: $primary-color;
+        font-size: 2rem;
+        padding: 0;
     }
 
     &__lower-wrapper {
@@ -69,12 +87,13 @@ $medium-height: 8rem;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background-color: $primary-color;
 
         p {
-            color: $mediumGray;
+            color: $iceWhite;
             font-weight: 400;
-            font-size: 18px;
-            line-height: 18px;
+            font-size: 1.6rem;
+            line-height: 1.8rem;
         }
     }
 }
