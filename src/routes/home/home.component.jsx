@@ -35,7 +35,7 @@ const Home = () => {
                 <h2 className='home-section__title'>Social Enterprise</h2>
                 <div className='home-section__wrapper'>
                     <div className='home-section__img-container'>
-                        <img src={EnterpriseFigure} alt="Enterprise" />
+                        <img className='home-section__img' src={EnterpriseFigure} alt="Enterprise" />
                     </div>
                     <div className='home-section__text-container'>
                         <p>Lorem ipsum dolor sit amet consectetur. Duis etiam dolor leo aliquet nulla. Sit tellus elit pellentesque curabitur nunc velit purus risus in. Egestas et at tempus nunc est morbi. Sapien ornare pellentesque.</p>
@@ -56,7 +56,7 @@ const Home = () => {
         return(
             <section className='home-section corporate-section'>
                 <h2 className='home-section__title'>Corporates</h2>
-                <div className='home-section__wrapper'>
+                <div className='home-section__wrapper invert-wrapper'>
                 <div className='home-section__text-container invert-text'>
                         <p>Lorem ipsum dolor sit amet consectetur. Duis etiam dolor leo aliquet nulla. Sit tellus elit pellentesque curabitur nunc velit purus risus in. Egestas et at tempus nunc est morbi. Sapien ornare pellentesque.</p>
                         <h3>Feature One</h3>
@@ -68,7 +68,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div className='home-section__img-container invert-img'>
-                        <img src={CorporateFigure} alt="Corporates" />
+                        <img className='home-section__img' src={CorporateFigure} alt="Corporates" />
                     </div>
                 </div>
             </section>
@@ -81,7 +81,7 @@ const Home = () => {
                 <h2 className='home-section__title'>Partnerships</h2>
                 <div className='home-section__wrapper'>
                     <div className='home-section__img-container'>
-                        <img src={PartnershipsFigure} alt="Partnerships" />
+                        <img className='home-section__img' src={PartnershipsFigure} alt="Partnerships" />
                     </div>
                     <div className='home-section__text-container'>
                         <p>Lorem ipsum dolor sit amet consectetur. Duis etiam dolor leo aliquet nulla. Sit tellus elit pellentesque curabitur nunc velit purus risus in. Egestas et at tempus nunc est morbi. Sapien ornare pellentesque.</p>
