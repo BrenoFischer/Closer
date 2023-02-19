@@ -1,17 +1,24 @@
 @import '../../sass/_variables';
-
+@import '../../sass/_mixins';
 
 //Styles for Home Header Component
 .header {
-    height: 62rem;
+    padding: 16rem 0rem;
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
     background-color: $primary-color;
+
+    @include respond(phone) {
+        padding: 24rem 2rem;
+    }
 
     &__container {
         margin: 0 30rem;
+
+        @include respond(phone) {
+            margin: 0;
+        }
     }
 
     &__title {
@@ -25,19 +32,34 @@
 
     &__paragraph {
         padding: 0 4rem;
-        margin-top: 5rem;
+        margin-top: 3.2rem;
         font-size: 1.8rem;
         font-weight: 400;
         line-height: 3rem;
         letter-spacing: 0em;
         text-align: center;
         color: $white;
+
+        @include respond(phone) {
+            padding: 0;
+            font-size: 2rem;
+        }
     }
 
     .buttons-container {
-        margin-top: 5rem;
+        margin-top: 4rem;
         display: flex;
         justify-content: space-around;
+
+
+        @include respond(phone) {
+            align-items: center;
+            flex-direction: column;
+
+            .button-wrapper:not(:last-child) {
+                margin-bottom: 6.4rem;
+            }
+        }
     }
 }
 
