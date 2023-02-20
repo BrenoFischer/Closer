@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 
+import { useMediaQuery } from 'react-responsive';
+
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 import Logo from '../../assets/logo-white.png';
@@ -7,6 +9,8 @@ import Logo from '../../assets/logo-white.png';
 import './footer.styles.scss';
 
 const Footer = () => {
+    const isPhone = useMediaQuery({ query: '(max-width: 600px' });
+
     return(
         <footer className='footer'>
             <div className='footer__upper-wrapper'>
@@ -17,10 +21,10 @@ const Footer = () => {
                     <ul className='footer__links-container'>
                         <Link className='footer__link' to='/'>Home</Link>
                         <Link className='footer__link' to='/'>About Closer</Link>
+                        <Link className='footer__link' to='/'>Contact</Link>
                         <Link className='footer__link' to='/'>Social Enterprise</Link>
                         <Link className='footer__link' to='/'>Corporates</Link>
                         <Link className='footer__link' to='/'>Partnership</Link>
-                        <Link className='footer__link' to='/'>Contact</Link>
                     </ul>
                 </div>
             </div>
@@ -40,8 +44,18 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            <div className='footer__line'></div>
             <div className='footer__lower-wrapper'>
-                <p>Copyright © 2023 Closer | All Rights Reserved</p>
+                {isPhone ? (
+                    <>
+                        <p>Copyright © 2023 Closer</p>
+                        <p>All Rights Reserved</p>
+                    </>
+                ):
+                (
+                    <p>Copyright © 2023 Closer | All Rights Reserved</p>
+                )}
+                
             </div>
         </footer>
     );
