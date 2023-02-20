@@ -44,7 +44,7 @@ const Navigation = () => {
                 </div>
                 <ul className='navigation__links-container'>
                     <Link className='navigation__link' to='/'>Home</Link>
-                    <Link className='navigation__link' to='/'>About Closer</Link>
+                    <Link className='navigation__link' to='/about'>About Closer</Link>
                     <Link className='navigation__link' to='/'>Social Enterprise</Link>
                     <Link className='navigation__link' to='/'>Corporates</Link>
                     <Link className='navigation__link' to='/'>Partnership</Link>
