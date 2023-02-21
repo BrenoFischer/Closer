@@ -101,10 +101,64 @@
     align-items: center;
 }
   
-//   .video-responsive iframe {
-//     left: 0;
-//     top: 0;
-//     height: 100%;
-//     width: 100%;
-//     position: absolute;
-// }
+.about-reports {
+
+    &__header {
+        text-align: center;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 3.2rem;
+        line-height: 3.8rem;
+        color: $primary-color;
+    }
+
+    &__subtitle {
+        margin-top: 2.4rem;
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 3.8rem;
+        color: $primary-color;
+    }
+
+    &__wrapper {
+        padding: 0 8rem;
+        margin-top: 4rem;
+        display: flex;
+
+        &:last-child {
+            margin-bottom: 12rem;
+        }
+    }
+
+    &__img {
+        max-height: 30rem;
+    }
+
+    &__img-label {
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 3.2rem;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    &__report-text {
+        margin-left: 8rem;
+        color: $black;
+        font-style: italic;
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 3.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.inverted-report {
+    margin-left: 0;
+    margin-right: 8rem;
+}
