@@ -26,7 +26,7 @@ const About = () => {
         return(
             <main className='about-description'>
                 <div className='about-description__wrapper'>
-                    <h3 className='about-description__title'>What is Closer?</h3>
+                    <h3 className='about-description__title'>What is CLOSER?</h3>
                     <div className='about-description__paragraph-wrapper'>
                         <p className='about-description__paragraph'><b>CLOSER</b> is bringing the social enterprise community together - making connections and sharing stories, experiences and ideas.</p>
                         <br/>
@@ -37,7 +37,7 @@ const About = () => {
                         <p className='about-description__paragraph'>Join <b>CLOSER</b> today and say Hello to the social enterprise community around Ireland and further.</p>
                     </div>
                 </div>
-                <div>
+                <div className='about-description__img-container'>
                     <img className='about-description__img' src={Logo} alt="Closer Logo" />
                 </div>
             </main>
@@ -76,8 +76,8 @@ const About = () => {
                 </div>
             </div>
 
-            <div className='about-reports__wrapper'>
-                <div className='about-reports__report-text inverted-report'>
+            <div className='about-reports__wrapper inverted-report-content'>
+                <div className='about-reports__report-text inverted-report-text'>
                     <p>“As a solo social entrepreneur, I find the support from like-minded people on a very similar journey invaluable. The updates, links, funding opportunity news, and general chat are so useful”</p>
                 </div>
                 <div className='about-reports__img-container'>
