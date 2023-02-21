@@ -1,0 +1,63 @@
+@import '../../sass/_variables';
+@import '../../sass/_mixins';
+
+//Styles for About Header Component
+.about-header {
+    padding-top: 14rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: $primary-color;
+
+    @include respond(phone) {
+        padding: 24rem 2rem;
+    }
+
+    &__text-container {
+        padding: 0 0 0 4rem;
+
+        @include respond(phone) {
+            margin: 0;
+        }
+    }
+
+    &__title {
+        padding-top: 3rem;
+        font-family: 'DM Serif Display';
+        font-weight: 400;
+        font-size: 4rem;
+        line-height: 4.8rem;
+        color: $iceWhite;
+        // text-align: center;
+
+        @include respond(phone) {
+            font-size: 7rem;
+            line-height: 8rem;
+        }
+    }
+
+    &__paragraph-wrapper {
+        max-width: 45rem;
+    }
+
+    &__paragraph {
+        margin-top: 2.4rem;
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 3.2rem;
+        color: $iceWhite;
+
+        @include respond(phone) {
+            padding: 0;
+        }
+    }
+
+    &__img {
+        // max-width: 45rem;
+
+        @include respond(phone) {
+            max-width: 100%;
+            max-height: auto;
+        }
+    }
+}
