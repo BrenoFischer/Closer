@@ -65,7 +65,7 @@ const About = () => {
             </div>
             <div className='about-reports__wrapper'>
                 <div className='about-reports__img-container'>
-                    <img className='about-reports__img' src={ReportImg1} />
+                    <img className='about-reports__img' src={ReportImg1} alt="Report Profile Mamobo"/>
                     <div className='about-reports__img-label'>
                         <p>Mamobo Ogoro</p>
                         <p>Gorm Media</p>
@@ -81,7 +81,7 @@ const About = () => {
                     <p>“As a solo social entrepreneur, I find the support from like-minded people on a very similar journey invaluable. The updates, links, funding opportunity news, and general chat are so useful”</p>
                 </div>
                 <div className='about-reports__img-container'>
-                    <img className='about-reports__img' src={ReportImg2} />
+                    <img className='about-reports__img' src={ReportImg2} alt="Report Profile Rachel" />
                     <div className='about-reports__img-label'>
                         <p>Rachel Tyrell</p>
                         <p>The Colour Club</p>
