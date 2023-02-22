@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
 import About from "./routes/about/about.component";
+import Contact from "./routes/contact/contact.component";
 import Home from "./routes/home/home.component";
 import Navigation from "./routes/navigation/navigation.component";
 
@@ -16,6 +17,7 @@ const App = () => {
       <Route path='/' element={<Navigation />}>
         <Route index element={<Home />} />
         <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
       </Route>
 
     </Routes>

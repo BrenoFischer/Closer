@@ -48,7 +48,7 @@ const Navigation = () => {
                     <Link className='navigation__link' to='/'>Social Enterprise</Link>
                     <Link className='navigation__link' to='/'>Corporates</Link>
                     <Link className='navigation__link' to='/'>Partnership</Link>
-                    <Link className='navigation__link' to='/'>Contact</Link>
+                    <Link className='navigation__link' to='/contact'>Contact</Link>
                 </ul>
             </nav>
             <Outlet />

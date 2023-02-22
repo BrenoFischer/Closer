@@ -1,0 +1,54 @@
+@import '../../sass/_variables';
+@import '../../sass/_mixins';
+
+//Styles for Home Contact Component
+.contact-header {
+    padding: 17rem 0rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $primary-color;
+
+    @include respond(phone) {
+        padding: 24rem 2rem;
+    }
+
+    &__container {
+        // margin: 0 30rem;
+
+        @include respond(phone) {
+            margin: 0;
+        }
+    }
+
+    &__title {
+        font-family: 'DM Serif Display';
+        font-weight: 400;
+        font-size: 4rem;
+        line-height: 4.8rem;
+        color: $iceWhite;
+        text-align: center;
+
+        @include respond(phone) {
+            font-size: 7rem;
+            line-height: 8rem;
+        }
+    }
+
+    &__paragraph {
+        margin-top: 2.4rem;
+        padding: 0 37rem;
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 3.2rem;
+
+        text-align: center;
+        color: $iceWhite;
+
+        @include respond(phone) {
+            padding: 0;
+        }
+    }
+}
+
+
