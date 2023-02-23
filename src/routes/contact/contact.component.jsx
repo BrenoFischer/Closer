@@ -1,6 +1,9 @@
 import { useState, useRef } from 'react';
 
+import emailjs from '@emailjs/browser';
+
 import Footer from '../../components/footer/footer.components';
+
 import './contact.styles.scss';
 
 const defaultFormFields = {
@@ -51,6 +54,16 @@ const FormInput = ({ label, addClass="", isTextArea=false, ...otherProps }) => (
 );
 
 
+const ContactHeader = () => (
+        <header className='contact-header'>
+            <div className='contact-header__container'>
+                <h1 className='contact-header__title'>Get in touch</h1>
+                <p className='contact-header__paragraph'>For further information on CLOSER don't hesitate to contact through any of the following methods.</p>
+            </div>
+        </header>
+);
+
+
 const Contact = () => {
     const form = useRef();
     const [formFields, setFormFields] = useState(defaultFormFields);
@@ -61,24 +74,26 @@ const Contact = () => {
         const { name, value } = event.target;
 
         setFormFields({...formFields, [name]: value});
-    }
+    };
 
 
-    const ContactHeader = () => {
-        return(
-            <header className='contact-header'>
-                <div className='contact-header__container'>
-                    <h1 className='contact-header__title'>Get in touch</h1>
-                    <p className='contact-header__paragraph'>For further information on CLOSER don’t hesitate to contact through any of the following methods.</p>
-                </div>
-            </header>
-        );
-    }
+    const sendMessage = (event) => {
+        event.preventDefault();
+
+        emailjs.sendForm('service_4n0kkhy', 'template_bbrsitd', form.current, '4Y4-IJ2hC5NM0ZrdC')
+            .then((result) => {
+                console.log("Message sent");
+                setFormFields(defaultFormFields);
+            }, (error) => {
+                console.log("Error to send message");
+            });
+    };
+
 
     return(
         <>
             <ContactHeader />
-            <form className='form' ref={form}>
+            <form className='form' ref={form} onSubmit={sendMessage}>
                 <div className='form__input-set'>
                     <FormInput 
                         label="First Name: "

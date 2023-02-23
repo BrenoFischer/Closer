@@ -136,6 +136,7 @@
     }
 
     &__submit-button {
+        cursor: pointer;
         padding: .8rem;
         background-color: $white;
         border: 1px solid #000000;
