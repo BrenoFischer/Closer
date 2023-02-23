@@ -57,12 +57,24 @@
     display: flex;
     flex-direction: column;
 
+    @include respond(phone) {
+        padding: 19rem 0;
+    }
+
     &__input {
         &-set {
             display: flex;
 
+            @include respond(phone) {
+                flex-direction: column;
+            }
+
             &:not(:first-child) {
                 margin-top: 4rem;
+
+                @include respond(phone) {
+                    margin-top: 7.6rem;
+                }
             }
         }
 
@@ -87,6 +99,11 @@
             border-radius: 6px;
             font-size: 2rem;
 
+            @include respond(phone) {
+                width: 100%;
+                min-height: 6.2rem;
+            }
+
             &:focus {
                 outline: none;
             }
@@ -94,6 +111,10 @@
 
         .subject {
             width: 69.4rem;
+
+            @include respond(phone) {
+                width: 100%;
+            }
         }
 
         .textarea {
@@ -101,10 +122,36 @@
             height: 28rem;
             padding-top: 2rem;
             resize: none;
+
+            @include respond(phone) {
+                width: 100%;
+            }
         }
+    }
+
+    &__submit-button-container {
+        margin-top: 6.4rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__submit-button {
+        padding: .8rem;
+        background-color: $white;
+        border: 1px solid #000000;
+        border-radius: 4px;
+
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.4rem;
     }
 }
 
 .margin-left-medium {
     margin-left: 8rem;
+
+    @include respond(phone) {
+        margin-left: 0;
+        margin-top: 7.6rem;
+    }
 }

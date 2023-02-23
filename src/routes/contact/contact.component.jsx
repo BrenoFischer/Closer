@@ -142,6 +142,9 @@ const Contact = () => {
                         value={message}
                     />
                 </div>
+                <div className='form__submit-button-container'>
+                    <button className='form__submit-button'>Send Message</button>
+                </div>
             </form>
             <Footer />
         </>
