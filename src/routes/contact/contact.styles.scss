@@ -52,3 +52,59 @@
 }
 
 
+.form {
+    padding: 12rem 15rem;
+    display: flex;
+    flex-direction: column;
+
+    &__input {
+        &-set {
+            display: flex;
+
+            &:not(:first-child) {
+                margin-top: 4rem;
+            }
+        }
+
+        &-label {
+            position: absolute;
+            font-weight: 500;
+            font-size: 2rem;
+            line-height: 1.8rem;
+
+            span {
+                color: #EC1C24;
+            }
+        }
+
+        &-field {
+            margin-top: 3.7rem;
+            padding-left: 2rem;
+            background-color: $iceWhite;
+            min-height: 5.6rem;
+            min-width: 39rem;
+            border: 1px solid #D9D9D9;
+            border-radius: 6px;
+            font-size: 2rem;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .subject {
+            width: 69.4rem;
+        }
+
+        .textarea {
+            width: 89.6rem;
+            height: 28rem;
+            padding-top: 2rem;
+            resize: none;
+        }
+    }
+}
+
+.margin-left-medium {
+    margin-left: 8rem;
+}
