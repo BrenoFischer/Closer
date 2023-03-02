@@ -53,29 +53,29 @@
 
 
 .form {
-    padding: 12rem 15rem;
+    padding: 8rem 15rem 12rem 15rem;
     display: flex;
     flex-direction: column;
 
     @include respond(phone) {
-        padding: 19rem 0;
+        padding: 11.4rem 0 19rem 0;
+    }
+
+    &__input-set {
+        width: 100%;
+        display: flex;
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
     }
 
     &__input {
-        &-set {
-            display: flex;
+        width: 100%;
+        margin-top: 4rem;
 
-            @include respond(phone) {
-                flex-direction: column;
-            }
-
-            &:not(:first-child) {
-                margin-top: 4rem;
-
-                @include respond(phone) {
-                    margin-top: 7.6rem;
-                }
-            }
+        @include respond(phone) {
+            margin-top: 7.6rem;
         }
 
         &-label {
@@ -94,7 +94,8 @@
             padding-left: 2rem;
             background-color: $iceWhite;
             min-height: 5.6rem;
-            min-width: 39rem;
+            // min-width: 39rem;
+            width: 85%;
             border: 1px solid #D9D9D9;
             border-radius: 6px;
             font-size: 2rem;
@@ -110,7 +111,7 @@
         }
 
         .subject {
-            width: 69.4rem;
+            width: 75%;
 
             @include respond(phone) {
                 width: 100%;
@@ -118,7 +119,7 @@
         }
 
         .textarea {
-            width: 89.6rem;
+            width: 100%;
             height: 28rem;
             padding-top: 2rem;
             resize: none;
@@ -133,6 +134,7 @@
         margin-top: 6.4rem;
         display: flex;
         justify-content: center;
+        position: relative;
     }
 
     &__submit-button {
@@ -154,5 +156,66 @@
     @include respond(phone) {
         margin-left: 0;
         margin-top: 7.6rem;
+    }
+}
+
+
+$message-box-padding-horizontal: 5rem;
+$message-box-padding-vertical: 10rem;
+
+.message-box {
+    position: fixed;
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: $message-box-padding-horizontal $message-box-padding-vertical;
+    background-color: $white;
+    border: solid 3px $secondary-color;
+    box-shadow: rgba(18, 30, 39, 0.6) 10px 10px;
+    
+    &__wrap {
+        display: flex;
+    }
+
+    &__exit {
+        cursor: pointer;
+        position: absolute;
+        font-size: 2.4rem;
+        top: .5rem;
+        right: .5rem;
+    }
+
+    &__icon-box {
+        font-size: 4rem;
+        margin-right: 3rem;
+        color: green;
+        display: flex;
+    }
+
+    &__icon-box-error {
+        font-size: 4rem;
+        margin-right: 3rem;
+        color: red;
+        display: flex;
+    }
+
+    &__text-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        p {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__title {
+        font-size: 2rem;
+        color: green;
+    }
+
+    &__title-error {
+        font-size: 2rem;
+        color: red;
     }
 }

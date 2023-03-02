@@ -1,8 +1,12 @@
 import { useState, useRef } from 'react';
 
+import { FiCheckCircle } from 'react-icons/fi';
+import { RxCrossCircled, RxCross2 } from 'react-icons/rx';
+
 import emailjs from '@emailjs/browser';
 
 import Footer from '../../components/footer/footer.components';
+import LoadingSpinner from '../../components/loading-spinner/loading-spinner.component';
 
 import './contact.styles.scss';
 
@@ -64,9 +68,66 @@ const ContactHeader = () => (
 );
 
 
+/* 
+Component that returns a sticky message box on top of page
+- the message box content depends on the emailError boolean
+- if the emailError variable is false, the box shows a success message
+- otherswise, it shows an error message with no further details of the error
+*/
+const TempMessageBox = ({handleCloseMessageBox, messageError}) => {
+    const ErrorMessageBox = () => (
+        <>
+            <div className='message-box__exit' onClick={handleCloseMessageBox}>
+                <RxCross2 />
+            </div>
+            <div className='message-box__wrap'>
+                <div className='message-box__icon-box-error'>
+                    <RxCrossCircled />
+                </div>
+                <div className='message-box__text-box'>
+                    <h2 className='message-box__title-error'>There was an error - e-mail was not sent</h2>
+                    <p>Sorry about that! Please, e-mail me manually: breno_perricone@hotmail.com</p>
+                </div>
+            </div>
+        </>
+    )
+
+
+        const SuccessMessageBox = () => (
+            <>
+                <div className='message-box__exit' onClick={handleCloseMessageBox}>
+                    <RxCross2 />
+                </div>
+                <div className='message-box__wrap'>
+                    <div className='message-box__icon-box'>
+                        <FiCheckCircle />
+                    </div>
+                    <div className='message-box__text-box'>
+                        <h2 className='message-box__title'>E-mail sent with success</h2>
+                        <p>Thank you for the message! I'll reply as soon as I can :)</p>
+                    </div>
+                </div>
+            </>
+        )
+
+        return (
+            <div className='message-box'>
+                { !messageError ?
+                    <SuccessMessageBox />
+                :
+                    <ErrorMessageBox />
+                }
+            </div>
+        );
+}
+
+
 const Contact = () => {
     const form = useRef();
     const [formFields, setFormFields] = useState(defaultFormFields);
+    const [loadingVisible, setLoadingVisible] = useState(false);
+    const [messageBoxVisible, setMessageBoxVisible] = useState(true);
+    const [emailError, setEmailError] = useState(false);
     const { firstName, lastName, email, phone, subject, message } = formFields;
 
 
@@ -77,15 +138,29 @@ const Contact = () => {
     };
 
 
+    const handleCloseMessageBox = () => {
+        setMessageBoxVisible(false);
+    }
+
     const sendMessage = (event) => {
+        const messageBoxTimer = 15000;
         event.preventDefault();
+        setLoadingVisible(true);
 
         emailjs.sendForm('service_4n0kkhy', 'template_bbrsitd', form.current, '4Y4-IJ2hC5NM0ZrdC')
             .then((result) => {
-                console.log("Message sent");
+                setMessageBoxVisible(true);
+                setTimeout(() => setMessageBoxVisible(false), messageBoxTimer); //this will set message box hidden after messageBoxTimer seconds
                 setFormFields(defaultFormFields);
+                setLoadingVisible(false);
             }, (error) => {
-                console.log("Error to send message");
+                setEmailError(true);
+                setTimeout(() => {
+                    setMessageBoxVisible(false)
+                    setEmailError(false);
+                }, messageBoxTimer);
+                setMessageBoxVisible(true);
+                setLoadingVisible(false);
             });
     };
 
@@ -103,16 +178,14 @@ const Contact = () => {
                         name="firstName" 
                         value={firstName}
                     />
-                    <div className='margin-left-medium'>
-                        <FormInput 
-                            label="Last Name: "
-                            type="text"
-                            required 
-                            onChange={handleInputChange} 
-                            name="lastName" 
-                            value={lastName}
-                        />
-                    </div>
+                    <FormInput 
+                        label="Last Name: "
+                        type="text"
+                        required 
+                        onChange={handleInputChange} 
+                        name="lastName" 
+                        value={lastName}
+                    />
                 </div>
                 <div className='form__input-set'>
                     <FormInput 
@@ -123,15 +196,13 @@ const Contact = () => {
                         name="email" 
                         value={email}
                     />
-                    <div className='margin-left-medium'>
-                        <FormInput 
-                            label="Telephone: "
-                            type="tel"
-                            onChange={handleInputChange} 
-                            name="phone" 
-                            value={phone}
-                        />
-                    </div>
+                    <FormInput 
+                        label="Telephone: "
+                        type="tel"
+                        onChange={handleInputChange} 
+                        name="phone" 
+                        value={phone}
+                    />
                 </div>
                 <div className='form__input-set'>
                     <FormInput 
@@ -158,8 +229,16 @@ const Contact = () => {
                     />
                 </div>
                 <div className='form__submit-button-container'>
-                    <button className='form__submit-button'>Send Message</button>
+                    {
+                        loadingVisible ? 
+                            <div className='form__spinner-container'><LoadingSpinner /></div>
+                        :
+                            <button className='form__submit-button'>Send Message</button>
+                    }
                 </div>
+                {messageBoxVisible &&
+                    <TempMessageBox handleCloseMessageBox={handleCloseMessageBox} messageError={emailError} />
+                }
             </form>
             <Footer />
         </>
