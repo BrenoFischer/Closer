@@ -77,46 +77,40 @@ Component that returns a sticky message box on top of page
 const TempMessageBox = ({handleCloseMessageBox, messageError}) => {
     const ErrorMessageBox = () => (
         <>
-            <div className='message-box__exit' onClick={handleCloseMessageBox}>
-                <RxCross2 />
+            <div className='message-box__icon-box-error'>
+                <RxCrossCircled />
             </div>
-            <div className='message-box__wrap'>
-                <div className='message-box__icon-box-error'>
-                    <RxCrossCircled />
-                </div>
-                <div className='message-box__text-box'>
-                    <h2 className='message-box__title-error'>There was an error - e-mail was not sent</h2>
-                    <p>Sorry about that! Please, e-mail me manually: breno_perricone@hotmail.com</p>
-                </div>
+            <div className='message-box__text-box'>
+                <h2 className='message-box__title-error'>There was an error - e-mail was not sent</h2>
+                <p>Sorry about that! Please, e-mail me manually: breno_perricone@hotmail.com</p>
             </div>
         </>
-    )
+    );
 
+    const SuccessMessageBox = () => (
+        <>
+            <div className='message-box__icon-box'>
+                <FiCheckCircle />
+            </div>
+            <div className='message-box__text-box'>
+                <h2 className='message-box__title'>E-mail sent with success</h2>
+                <p>Thank you for the message! I'll reply as soon as I can :)</p>
+            </div>
+        </>
+    );
 
-        const SuccessMessageBox = () => (
-            <>
+        return (
+            <div className='message-box'>
                 <div className='message-box__exit' onClick={handleCloseMessageBox}>
                     <RxCross2 />
                 </div>
                 <div className='message-box__wrap'>
-                    <div className='message-box__icon-box'>
-                        <FiCheckCircle />
-                    </div>
-                    <div className='message-box__text-box'>
-                        <h2 className='message-box__title'>E-mail sent with success</h2>
-                        <p>Thank you for the message! I'll reply as soon as I can :)</p>
-                    </div>
+                    { !messageError ?
+                        <SuccessMessageBox />
+                    :
+                        <ErrorMessageBox />
+                    }
                 </div>
-            </>
-        )
-
-        return (
-            <div className='message-box'>
-                { !messageError ?
-                    <SuccessMessageBox />
-                :
-                    <ErrorMessageBox />
-                }
             </div>
         );
 }

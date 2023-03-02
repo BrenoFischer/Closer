@@ -172,9 +172,18 @@ $message-box-padding-vertical: 10rem;
     background-color: $white;
     border: solid 3px $secondary-color;
     box-shadow: rgba(18, 30, 39, 0.6) 10px 10px;
+
+    @include respond(phone) {
+        padding: 3rem 4rem;
+    }
     
     &__wrap {
         display: flex;
+
+        @include respond(phone) {
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     &__exit {
