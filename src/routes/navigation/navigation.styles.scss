@@ -1,15 +1,18 @@
 @import '../../sass/_variables';
 @import '../../sass/_mixins';
 
+$navBarHeight: 8rem;
+$navBarHeightPhone: 14.4rem;
+
 .navigation {
-    height: 8rem;
+    height: $navBarHeight;
     width: 100%;
     position: relative;
     display: flex;
     justify-content: space-between;
 
     @include respond(phone) {
-      height: 14.4rem;
+      height: $navBarHeightPhone;
     }
   
     &__logo-container {
@@ -82,19 +85,16 @@
       }
     }
 
-    // &__menu-open {
-    //   position:fixed;
-    //   width:100vw;
-    //   height:100vh;
-    //   top:0px;
-    //   left:0px;
-    //   z-index:1000;
-    //   background-color: $primary-color;
-    // }
+    &__menu-open {
+      position: absolute;
+      top: $navBarHeightPhone;
+      background-color: $white;
+    }
 
     &__links-container--phone {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      // flex-direction: column;
     }
 
     &__link {
