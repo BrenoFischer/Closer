@@ -37,6 +37,10 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
+    @include respond(tablet-port) {
+      padding: $globalPaddingTabletPort;
+    }
+
     @include respond(phone) {
       padding: $globalPaddingPhone;
     }

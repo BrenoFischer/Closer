@@ -11,7 +11,7 @@ $navBarHeightPhone: 14.4rem;
     display: flex;
     justify-content: space-between;
 
-    @include respond(phone) {
+    @include respond(tablet-port) {
       height: $navBarHeightPhone;
     }
   
@@ -23,7 +23,7 @@ $navBarHeightPhone: 14.4rem;
       img {
         width: 6rem;
 
-        @include respond(phone) {
+        @include respond(tablet-port) {
           width: 11.2rem;
         }
       }
@@ -40,21 +40,21 @@ $navBarHeightPhone: 14.4rem;
       width: 3.8rem;
       height: 3.8rem;
 
-      @include respond(phone) {
+      @include respond(tablet-port) {
         display: flex;
       }
 
         .bar {
           width: 100%;
-          background-color: $primary-color;
-          border: 1px solid $primary-color;
+          background-color: $primaryColor;
+          border: 1px solid $primaryColor;
           border-radius: 10px;
         }
 
         .close-bar {
           width: 100%;
           height: 2px;
-          background-color: $primary-color;
+          background-color: $primaryColor;
           border-radius: 10px;
           transform: rotate(135deg);
           position: absolute;
@@ -64,7 +64,7 @@ $navBarHeightPhone: 14.4rem;
         .close-bar-bottom {
           width: 100%;
           height: 2px;
-          background-color: $primary-color;
+          background-color: $primaryColor;
           border-radius: 10px;
           transform: rotate(-135deg);
           position: absolute;
@@ -80,7 +80,7 @@ $navBarHeightPhone: 14.4rem;
       align-items: center;
       justify-content: flex-end;
 
-      @include respond(phone) {
+      @include respond(tablet-port) {
         display: none;
       }
     }
@@ -107,7 +107,7 @@ $navBarHeightPhone: 14.4rem;
       font-weight: 500;
       font-size: 1.6rem;
       line-height: 1.8rem;
-      color: $secondary-color;
+      color: $secondaryColor;
       
       text-align: center;
       padding: 3.2rem 2.4rem;

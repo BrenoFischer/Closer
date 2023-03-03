@@ -7,7 +7,11 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    background-color: $primary-color;
+    background-color: $primaryColor;
+
+    @include respond(tablet-port) {
+        padding: 16rem 2rem;
+    }
 
     @include respond(phone) {
         padding: 24rem 2rem;
@@ -16,7 +20,7 @@
     &__container {
         // margin: 0 30rem;
 
-        @include respond(phone) {
+        @include respond(tablet-port) {
             margin: 0;
         }
     }
@@ -29,7 +33,7 @@
         color: $iceWhite;
         text-align: center;
 
-        @include respond(phone) {
+        @include respond(tablet-port) {
             font-size: 7rem;
             line-height: 8rem;
         }
@@ -45,7 +49,7 @@
         text-align: center;
         color: $iceWhite;
 
-        @include respond(phone) {
+        @include respond(tablet-port) {
             padding: 0;
         }
     }
@@ -57,6 +61,10 @@
     display: flex;
     flex-direction: column;
 
+    @include respond(tablet-port) {
+        padding: 6rem 0 8rem 0;
+    }
+
     @include respond(phone) {
         padding: 11.4rem 0 19rem 0;
     }
@@ -65,7 +73,7 @@
         width: 100%;
         display: flex;
 
-        @include respond(phone) {
+        @include respond(tablet-port) {
             flex-direction: column;
         }
     }
@@ -74,7 +82,7 @@
         width: 100%;
         margin-top: 4rem;
 
-        @include respond(phone) {
+        @include respond(tablet-port) {
             margin-top: 7.6rem;
         }
 
@@ -102,9 +110,13 @@
 
             transition: all .1s;
 
+            @include respond(tablet-port) {
+                width: 80%;
+                min-height: 6.2rem;
+            }
+
             @include respond(phone) {
                 width: 100%;
-                min-height: 6.2rem;
             }
 
             &:focus {
@@ -120,6 +132,10 @@
         .subject {
             width: 75%;
 
+            @include respond(tablet-port) {
+                width: 90%;
+            }
+
             @include respond(phone) {
                 width: 100%;
             }
@@ -131,7 +147,7 @@
             padding-top: 2rem;
             resize: none;
 
-            @include respond(phone) {
+            @include respond(tablet-port) {
                 width: 100%;
             }
         }
@@ -172,7 +188,7 @@
 .margin-left-medium {
     margin-left: 8rem;
 
-    @include respond(phone) {
+    @include respond(tablet-port) {
         margin-left: 0;
         margin-top: 7.6rem;
     }
@@ -189,17 +205,17 @@ $message-box-padding-vertical: 10rem;
     transform: translateX(-50%);
     padding: $message-box-padding-horizontal $message-box-padding-vertical;
     background-color: $white;
-    border: solid 3px $secondary-color;
+    border: solid 3px $secondaryColor;
     box-shadow: rgba(18, 30, 39, 0.6) 10px 10px;
 
-    @include respond(phone) {
+    @include respond(tablet-port) {
         padding: 3rem 4rem;
     }
     
     &__wrap {
         display: flex;
 
-        @include respond(phone) {
+        @include respond(tablet-port) {
             justify-content: center;
             align-items: center;
         }

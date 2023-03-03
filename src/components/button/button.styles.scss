@@ -2,7 +2,7 @@
 @import '../../sass/_mixins';
 
 .button {
-    background-color: $secondary-color;
+    background-color: $secondaryColor;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -23,25 +23,25 @@
 
     transition: all .4s;
 
-    @include respond(phone) {
+    @include respond(tablet-port) {
         font-size: 2rem;
         padding: 1.4rem;
     }
 }
 
 .blue {
-    background-color: $secondary-color;
+    background-color: $secondaryColor;
 
     &:hover {
-        background-color: darken($secondary-color, 7%);
+        background-color: darken($secondaryColor, 7%);
     }
 }
 
 .orange {
-    background-color: $tertiary-color;
+    background-color: $tertiaryColor;
 
     &:hover {
-        background-color: darken($tertiary-color, 7%);
+        background-color: darken($tertiaryColor, 7%);
     }
 }
 

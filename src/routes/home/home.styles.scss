@@ -7,7 +7,11 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    background-color: $primary-color;
+    background-color: $primaryColor;
+
+    @include respond(tablet-port) {
+        padding: 12rem 2rem;
+    }
 
     @include respond(phone) {
         padding: 24rem 2rem;
@@ -16,7 +20,7 @@
     &__container {
         margin: 0 30rem;
 
-        @include respond(phone) {
+        @include respond(tablet-port) {
             margin: 0;
         }
     }
@@ -73,13 +77,13 @@
     padding: 12rem 4rem;
     position: relative;
 
-    @include respond(phone) {
+    @include respond(tablet-port) {
         padding: 120px 0 70px 0;
         margin-bottom: 50px;
     }
 
     &__title {
-        color: $secondary-color;
+        color: $secondaryColor;
         font-family: 'DM Serif Display';
         font-style: normal;
         font-weight: 400;
@@ -91,7 +95,7 @@
         margin-top: 4.8rem;
         display: flex;
 
-        @include respond(phone) {
+        @include respond(tablet-port) {
             flex-direction: column-reverse;
         }
     }
@@ -100,7 +104,7 @@
         margin-right: 11rem;
         flex-shrink: 0;
 
-        @include respond(phone) {
+        @include respond(tablet-port) {
             margin-right: 0;
             margin-top: 5.6rem;
 
@@ -112,7 +116,7 @@
     &__img {
         max-width: 45rem;
 
-        @include respond(phone) {
+        @include respond(tablet-port) {
             max-width: 100%;
             max-height: auto;
         }
@@ -124,10 +128,10 @@
     }
 
     &__text-container {
-        color: $primary-color;
+        color: $primaryColor;
         position: relative;
 
-        @include respond(phone) {
+        @include respond(tablet-port) {
             position: static;
         }
 
@@ -141,21 +145,21 @@
             }
 
             &:first-child {
-                @include respond(phone) {
+                @include respond(tablet-port) {
                     margin-bottom: 7.6rem;
                 }
             }
         }
 
         h3 {
-            color: $tertiary-color;
+            color: $tertiaryColor;
             font-family: 'DM Serif Display';
             font-style: normal;
             font-weight: 400;
             font-size: 28px;
             line-height: 33px;
 
-            @include respond(phone) {
+            @include respond(tablet-port) {
                 text-align: center;
             }
 
@@ -169,7 +173,7 @@
         position: absolute;
         bottom: 0;
 
-        @include respond(phone) {
+        @include respond(tablet-port) {
             left: 50%;
             transform: translateX(-50%);
         }
@@ -185,13 +189,13 @@
 .invert-text {
     margin-right: 11rem;
 
-    @include respond(phone) {
+    @include respond(tablet-port) {
         margin-right: 0;
     }
 }
 
 .invert-wrapper {
-    @include respond(phone) {
+    @include respond(tablet-port) {
         flex-direction: column;
     }
 }
