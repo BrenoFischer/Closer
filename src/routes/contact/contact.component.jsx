@@ -1,5 +1,7 @@
 import { useState, useRef } from 'react';
 
+import Fade from 'react-reveal/Fade';
+
 import { FiCheckCircle } from 'react-icons/fi';
 import { RxCrossCircled, RxCross2 } from 'react-icons/rx';
 
@@ -60,10 +62,12 @@ const FormInput = ({ label, addClass="", isTextArea=false, ...otherProps }) => (
 
 const ContactHeader = () => (
         <header className='contact-header'>
-            <div className='contact-header__container'>
-                <h1 className='contact-header__title'>Get in touch</h1>
-                <p className='contact-header__paragraph'>For further information on CLOSER don't hesitate to contact through any of the following methods.</p>
-            </div>
+            <Fade>
+                <div className='contact-header__container'>
+                    <h1 className='contact-header__title'>Get in touch</h1>
+                    <p className='contact-header__paragraph'>For further information on CLOSER don't hesitate to contact through any of the following methods.</p>
+                </div>
+            </Fade>
         </header>
 );
 
