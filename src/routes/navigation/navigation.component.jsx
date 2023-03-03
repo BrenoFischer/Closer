@@ -7,14 +7,14 @@ import Logo from '../../assets/logo-color.png';
 import './navigation.styles.scss';
 
 
-const LinksList = () => (
+const LinksList = ({ phoneLink="" }) => (
     <>
-        <Link className='navigation__link' to='/'>Home</Link>
-        <Link className='navigation__link' to='/about'>About Closer</Link>
-        <Link className='navigation__link' to='/'>Social Enterprise</Link>
-        <Link className='navigation__link' to='/'>Corporates</Link>
-        <Link className='navigation__link' to='/'>Partnership</Link>
-        <Link className='navigation__link' to='/contact'>Contact</Link>
+        <Link className={`navigation__link ${phoneLink}`} to='/'>Home</Link>
+        <Link className={`navigation__link ${phoneLink}`} to='/about'>About Closer</Link>
+        <Link className={`navigation__link ${phoneLink}`} to='/'>Social Enterprise</Link>
+        <Link className={`navigation__link ${phoneLink}`} to='/'>Corporates</Link>
+        <Link className={`navigation__link ${phoneLink}`} to='/'>Partnership</Link>
+        <Link className={`navigation__link ${phoneLink}`} to='/contact'>Contact</Link>
     </>
 )
 
@@ -48,7 +48,7 @@ const Navigation = () => {
                 {menuOpen ?
                     (<div className='navigation__menu-open'>
                         <ul className='navigation__links-container--phone'>
-                            <LinksList />
+                            <LinksList phoneLink='navigation__phone-link' />
                         </ul> 
                     </div>)
                 :

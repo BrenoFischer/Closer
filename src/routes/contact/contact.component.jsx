@@ -81,8 +81,8 @@ const TempMessageBox = ({handleCloseMessageBox, messageError}) => {
                 <RxCrossCircled />
             </div>
             <div className='message-box__text-box'>
-                <h2 className='message-box__title-error'>There was an error - e-mail was not sent</h2>
-                <p>Sorry about that! Please, e-mail me manually: breno_perricone@hotmail.com</p>
+                <h2 className='message-box__title-error'>There was an error - message was not sent</h2>
+                <p>Sorry about that! Please, contact us sending an e-mail to: email@address.com</p>
             </div>
         </>
     );
@@ -94,7 +94,7 @@ const TempMessageBox = ({handleCloseMessageBox, messageError}) => {
             </div>
             <div className='message-box__text-box'>
                 <h2 className='message-box__title'>E-mail sent with success</h2>
-                <p>Thank you for the message! I'll reply as soon as I can :)</p>
+                <p>Thank you for the message! We'll reply as soon as possible :)</p>
             </div>
         </>
     );
@@ -120,7 +120,7 @@ const Contact = () => {
     const form = useRef();
     const [formFields, setFormFields] = useState(defaultFormFields);
     const [loadingVisible, setLoadingVisible] = useState(false);
-    const [messageBoxVisible, setMessageBoxVisible] = useState(true);
+    const [messageBoxVisible, setMessageBoxVisible] = useState(false);
     const [emailError, setEmailError] = useState(false);
     const { firstName, lastName, email, phone, subject, message } = formFields;
 
