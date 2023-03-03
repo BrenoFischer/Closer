@@ -109,6 +109,7 @@
 
             &:focus {
                 outline: none;
+                border: 2px solid darken(#D9D9D9, 20%);
             }
 
             &:hover {

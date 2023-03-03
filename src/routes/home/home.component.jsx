@@ -1,3 +1,5 @@
+import Slide from 'react-reveal/Slide';
+
 import EnterpriseFigure from '../../assets/enterprise-home-figure.png';
 import CorporateFigure from '../../assets/corporates-home-figure.png';
 import PartnershipsFigure from '../../assets/partnership-home-figure.png';
@@ -32,21 +34,27 @@ const Home = () => {
     const HomeEnterpriseSection = () => {
         return(
             <section className='home-section enterprise-section'>
-                <h2 className='home-section__title'>Social Enterprise</h2>
+                <Slide left>
+                    <h2 className='home-section__title'>Social Enterprise</h2>
+                </Slide>
                 <div className='home-section__wrapper'>
-                    <div className='home-section__img-container'>
-                        <img className='home-section__img' src={EnterpriseFigure} alt="Enterprise" />
-                    </div>
-                    <div className='home-section__text-container'>
-                        <p>Lorem ipsum dolor sit amet consectetur. Duis etiam dolor leo aliquet nulla. Sit tellus elit pellentesque curabitur nunc velit purus risus in. Egestas et at tempus nunc est morbi. Sapien ornare pellentesque.</p>
-                        <h3>Feature One</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur. In sagittis sit condimentum diam in lacus. Aliquet viverra velit duis enim lacus sit sit praesent purus.</p>
-                        <h3>Feature Two</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur. In sagittis sit condimentum diam in lacus. Aliquet viverra velit duis enim lacus sit sit praesent purus.</p>
-                        <div className='home-section__button-container'>
-                            <Button title='Social Enterprises' color="orange" />
+                    <Slide left>
+                        <div className='home-section__img-container'>
+                            <img className='home-section__img' src={EnterpriseFigure} alt="Enterprise" />
                         </div>
-                    </div>
+                    </Slide>
+                    <Slide right cascade>
+                        <div className='home-section__text-container'>
+                            <p>Lorem ipsum dolor sit amet consectetur. Duis etiam dolor leo aliquet nulla. Sit tellus elit pellentesque curabitur nunc velit purus risus in. Egestas et at tempus nunc est morbi. Sapien ornare pellentesque.</p>
+                            <h3>Feature One</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur. In sagittis sit condimentum diam in lacus. Aliquet viverra velit duis enim lacus sit sit praesent purus.</p>
+                            <h3>Feature Two</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur. In sagittis sit condimentum diam in lacus. Aliquet viverra velit duis enim lacus sit sit praesent purus.</p>
+                            <div className='home-section__button-container'>
+                                <Button title='Social Enterprises' color="orange" />
+                            </div>
+                        </div>
+                    </Slide>
                 </div>
             </section>
         );
@@ -55,9 +63,12 @@ const Home = () => {
     const HomeCorporateSection = () => {
         return(
             <section className='home-section corporate-section'>
-                <h2 className='home-section__title'>Corporates</h2>
+                <Slide left>
+                    <h2 className='home-section__title'>Corporates</h2>
+                </Slide>
                 <div className='home-section__wrapper invert-wrapper'>
-                <div className='home-section__text-container invert-text'>
+                <Slide left cascade>
+                    <div className='home-section__text-container invert-text'>
                         <p>Lorem ipsum dolor sit amet consectetur. Duis etiam dolor leo aliquet nulla. Sit tellus elit pellentesque curabitur nunc velit purus risus in. Egestas et at tempus nunc est morbi. Sapien ornare pellentesque.</p>
                         <h3>Feature One</h3>
                         <p>Lorem ipsum dolor sit amet consectetur. In sagittis sit condimentum diam in lacus. Aliquet viverra velit duis enim lacus sit sit praesent purus.</p>
@@ -67,9 +78,12 @@ const Home = () => {
                             <Button title='Corporates' color="blue" />
                         </div>
                     </div>
+                </Slide>
+                <Slide right>
                     <div className='home-section__img-container invert-img'>
                         <img className='home-section__img' src={CorporateFigure} alt="Corporates" />
                     </div>
+                </Slide>
                 </div>
             </section>
         );
@@ -78,21 +92,27 @@ const Home = () => {
     const HomePartnershipsSection = () => {
         return(
             <section className='home-section partsnerships-section'>
-                <h2 className='home-section__title'>Partnerships</h2>
+                <Slide left>
+                    <h2 className='home-section__title'>Partnerships</h2>
+                </Slide>
                 <div className='home-section__wrapper'>
-                    <div className='home-section__img-container'>
-                        <img className='home-section__img' src={PartnershipsFigure} alt="Partnerships" />
-                    </div>
-                    <div className='home-section__text-container'>
-                        <p>Lorem ipsum dolor sit amet consectetur. Duis etiam dolor leo aliquet nulla. Sit tellus elit pellentesque curabitur nunc velit purus risus in. Egestas et at tempus nunc est morbi. Sapien ornare pellentesque.</p>
-                        <h3>Feature One</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur. In sagittis sit condimentum diam in lacus. Aliquet viverra velit duis enim lacus sit sit praesent purus.</p>
-                        <h3>Feature Two</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur. In sagittis sit condimentum diam in lacus. Aliquet viverra velit duis enim lacus sit sit praesent purus.</p>
-                        <div className='home-section__button-container'>
-                            <Button title='Partnerships' color="green" />
+                    <Slide left>
+                        <div className='home-section__img-container'>
+                            <img className='home-section__img' src={PartnershipsFigure} alt="Partnerships" />
                         </div>
-                    </div>
+                    </Slide>
+                    <Slide right cascade>
+                        <div className='home-section__text-container'>
+                            <p>Lorem ipsum dolor sit amet consectetur. Duis etiam dolor leo aliquet nulla. Sit tellus elit pellentesque curabitur nunc velit purus risus in. Egestas et at tempus nunc est morbi. Sapien ornare pellentesque.</p>
+                            <h3>Feature One</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur. In sagittis sit condimentum diam in lacus. Aliquet viverra velit duis enim lacus sit sit praesent purus.</p>
+                            <h3>Feature Two</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur. In sagittis sit condimentum diam in lacus. Aliquet viverra velit duis enim lacus sit sit praesent purus.</p>
+                            <div className='home-section__button-container'>
+                                <Button title='Partnerships' color="green" />
+                            </div>
+                        </div>
+                    </Slide>
                 </div>
             </section>
         );
