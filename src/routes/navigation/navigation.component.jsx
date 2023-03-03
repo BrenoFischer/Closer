@@ -6,24 +6,23 @@ import Logo from '../../assets/logo-color.png';
 
 import './navigation.styles.scss';
 
-
-const LinksList = ({ phoneLink="" }) => (
-    <>
-        <Link className={`navigation__link ${phoneLink}`} to='/'>Home</Link>
-        <Link className={`navigation__link ${phoneLink}`} to='/about'>About Closer</Link>
-        <Link className={`navigation__link ${phoneLink}`} to='/'>Social Enterprise</Link>
-        <Link className={`navigation__link ${phoneLink}`} to='/'>Corporates</Link>
-        <Link className={`navigation__link ${phoneLink}`} to='/'>Partnership</Link>
-        <Link className={`navigation__link ${phoneLink}`} to='/contact'>Contact</Link>
-    </>
-)
-
 const Navigation = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     }
+
+    const LinksList = ({ phoneLink="" }) => (
+        <>
+            <Link className={`navigation__link ${phoneLink}`} onClick={() => { phoneLink && toggleMenu() }} to='/'>Home</Link>
+            <Link className={`navigation__link ${phoneLink}`} onClick={() => { phoneLink && toggleMenu() }} to='/about'>About Closer</Link>
+            <Link className={`navigation__link ${phoneLink}`} onClick={() => { phoneLink && toggleMenu() }} to='/'>Social Enterprise</Link>
+            <Link className={`navigation__link ${phoneLink}`} onClick={() => { phoneLink && toggleMenu() }} to='/'>Corporates</Link>
+            <Link className={`navigation__link ${phoneLink}`} onClick={() => { phoneLink && toggleMenu() }} to='/'>Partnership</Link>
+            <Link className={`navigation__link ${phoneLink}`} onClick={() => { phoneLink && toggleMenu() }} to='/contact'>Contact</Link>
+        </>
+    )
 
     return(
         <>
