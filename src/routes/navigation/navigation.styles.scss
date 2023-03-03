@@ -92,7 +92,7 @@ $navBarHeightPhone: 14.4rem;
       background-color: $white;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
-
+    
     &__links-container--phone {
       display: flex;
       flex-wrap: wrap;
@@ -100,15 +100,23 @@ $navBarHeightPhone: 14.4rem;
     }
 
     &__link {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 1.6rem;
-        line-height: 1.8rem;
-        color: $secondary-color;
+      height: 100%;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+      color: $secondary-color;
+      
+      text-align: center;
+      padding: 3.2rem 2.4rem;
+      cursor: pointer;
+      
+      transition-property: all;
+      transition-duration: .5s;
 
-        text-align: center;
-        padding: 3.2rem 2.4rem;
-        cursor: pointer;
+        &:hover {
+          background-color: $lightGray;
+        }
     }
 
     &__phone-link {
