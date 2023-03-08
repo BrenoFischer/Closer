@@ -85,7 +85,7 @@ const TempMessageBox = ({handleCloseMessageBox, messageError}) => {
                 <RxCrossCircled />
             </div>
             <div className='message-box__text-box'>
-                <h2 className='message-box__title-error'>There was an error - message was not sent</h2>
+                <h2 className='message-box__title-error'>An error has ocurred - message was not sent</h2>
                 <p>Sorry about that! Please, contact us sending an e-mail to: email@address.com</p>
             </div>
         </>

@@ -58,6 +58,10 @@ $mediumHeight: 4.5rem;
         justify-content: center;
         flex-wrap: wrap;
 
+        @include respond(tablet) {
+            padding-left: $upperHeight;
+        }
+
         @include respond(tablet-port) {
             margin-top: 3.1rem;
             justify-content: space-around;

@@ -9,6 +9,10 @@
     flex-wrap: wrap;
     background-color: $primaryColor;
 
+    @include respond(tablet) {
+        padding: 16rem 2rem;
+    }
+
     @include respond(tablet-port) {
         padding: 12rem 2rem;
     }
@@ -19,6 +23,10 @@
 
     &__container {
         margin: 0 30rem;
+
+        @include respond(tablet) {
+            margin: 0 10rem;
+        }
 
         @include respond(tablet-port) {
             margin: 0;
@@ -77,7 +85,7 @@
     padding: 12rem 4rem;
     position: relative;
 
-    @include respond(tablet-port) {
+    @include respond(tablet) {
         padding: 120px 0 70px 0;
         margin-bottom: 50px;
     }
@@ -95,7 +103,7 @@
         margin-top: 4.8rem;
         display: flex;
 
-        @include respond(tablet-port) {
+        @include respond(tablet) {
             flex-direction: column-reverse;
         }
     }
@@ -104,7 +112,7 @@
         margin-right: 11rem;
         flex-shrink: 0;
 
-        @include respond(tablet-port) {
+        @include respond(tablet) {
             margin-right: 0;
             margin-top: 5.6rem;
 
@@ -116,7 +124,7 @@
     &__img {
         max-width: 45rem;
 
-        @include respond(tablet-port) {
+        @include respond(tablet) {
             max-width: 100%;
             max-height: auto;
         }
@@ -131,7 +139,7 @@
         color: $primaryColor;
         position: relative;
 
-        @include respond(tablet-port) {
+        @include respond(tablet) {
             position: static;
         }
 
@@ -145,7 +153,7 @@
             }
 
             &:first-child {
-                @include respond(tablet-port) {
+                @include respond(tablet) {
                     margin-bottom: 7.6rem;
                 }
             }
@@ -159,7 +167,7 @@
             font-size: 28px;
             line-height: 33px;
 
-            @include respond(tablet-port) {
+            @include respond(tablet) {
                 text-align: center;
             }
 
@@ -173,7 +181,7 @@
         position: absolute;
         bottom: 0;
 
-        @include respond(tablet-port) {
+        @include respond(tablet) {
             left: 50%;
             transform: translateX(-50%);
         }
@@ -189,13 +197,13 @@
 .invert-text {
     margin-right: 11rem;
 
-    @include respond(tablet-port) {
+    @include respond(tablet) {
         margin-right: 0;
     }
 }
 
 .invert-wrapper {
-    @include respond(tablet-port) {
+    @include respond(tablet) {
         flex-direction: column;
     }
 }

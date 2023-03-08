@@ -20,8 +20,8 @@ const Footer = () => {
                 <div className='footer__links-container'>
                     <ul className='footer__links-container'>
                         <Link className='footer__link' to='/'>Home</Link>
-                        <Link className='footer__link' to='/'>About Closer</Link>
-                        <Link className='footer__link' to='/'>Contact</Link>
+                        <Link className='footer__link' to='/about'>About Closer</Link>
+                        <Link className='footer__link' to='/contact'>Contact</Link>
                         <Link className='footer__link' to='/'>Social Enterprise</Link>
                         <Link className='footer__link' to='/'>Corporates</Link>
                         <Link className='footer__link' to='/'>Partnership</Link>

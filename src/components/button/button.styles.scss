@@ -23,6 +23,10 @@
 
     transition: all .4s;
 
+    @include respond(tablet) {
+        padding: 1.6rem;
+    }
+
     @include respond(tablet-port) {
         font-size: 2rem;
         padding: 1.4rem;

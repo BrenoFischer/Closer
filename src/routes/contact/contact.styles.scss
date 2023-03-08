@@ -8,7 +8,7 @@
     display: flex;
     flex-wrap: wrap;
     background-color: $primaryColor;
-
+    
     @include respond(tablet-port) {
         padding: 16rem 2rem;
     }
@@ -20,8 +20,8 @@
     &__container {
         // margin: 0 30rem;
 
-        @include respond(tablet-port) {
-            margin: 0;
+        @include respond(tablet) {
+            margin: auto;
         }
     }
 
@@ -49,6 +49,10 @@
         text-align: center;
         color: $iceWhite;
 
+        @include respond(tablet) {
+            padding: 0 10rem;
+        }
+
         @include respond(tablet-port) {
             padding: 0;
         }
@@ -61,7 +65,7 @@
     display: flex;
     flex-direction: column;
 
-    @include respond(tablet-port) {
+    @include respond(tablet) {
         padding: 6rem 0 8rem 0;
     }
 
@@ -147,6 +151,10 @@
             padding-top: 2rem;
             resize: none;
 
+            @include respond(tablet) {
+                width: 93%;
+            }
+
             @include respond(tablet-port) {
                 width: 100%;
             }
@@ -208,14 +216,14 @@ $message-box-padding-vertical: 10rem;
     border: solid 3px $secondaryColor;
     box-shadow: rgba(18, 30, 39, 0.6) 10px 10px;
 
-    @include respond(tablet-port) {
+    @include respond(tablet) {
         padding: 3rem 4rem;
     }
     
     &__wrap {
         display: flex;
 
-        @include respond(tablet-port) {
+        @include respond(tablet) {
             justify-content: center;
             align-items: center;
         }
