@@ -63,6 +63,7 @@ $mediumHeight: 4.5rem;
         }
 
         @include respond(tablet-port) {
+            padding-left: 2rem;
             margin-top: 3.1rem;
             justify-content: space-around;
             margin-bottom: 2.2rem;
